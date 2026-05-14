@@ -3,51 +3,43 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Bihar College of Pharmacy | Official</title>
+    <title>Bihar College of Pharmacy | Official Patna</title>
     <style>
-        * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Segoe UI', Arial, sans-serif; }
-        body { background-color: #f8f9fa; }
+        * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Segoe UI', Tahoma, sans-serif; }
+        body { background-color: #f4f7f6; color: #333; }
 
-        /* Top Contact Bar */
-        .top-bar { background: #ffcc00; color: #002147; padding: 10px 5%; text-align: right; font-weight: bold; font-size: 14px; }
+        /* Top Bar */
+        .top-bar { background: #ffcc00; color: #002147; padding: 10px 5%; text-align: right; font-weight: bold; font-size: 13px; }
 
         /* Navigation */
-        nav { background: #002147; padding: 20px 5%; display: flex; justify-content: space-between; align-items: center; position: sticky; top: 0; z-index: 1000; box-shadow: 0 4px 10px rgba(0,0,0,0.1); }
-        .logo h1 { color: white; font-size: 22px; text-transform: uppercase; letter-spacing: 1px; }
-        .nav-links a { color: white; text-decoration: none; margin-left: 25px; font-weight: 500; transition: 0.3s; }
+        nav { background: #002147; padding: 15px 5%; display: flex; justify-content: space-between; align-items: center; position: sticky; top: 0; z-index: 1000; box-shadow: 0 2px 10px rgba(0,0,0,0.2); }
+        .logo h1 { color: white; font-size: 22px; letter-spacing: 1px; }
+        .nav-links a { color: white; text-decoration: none; margin-left: 20px; font-size: 14px; font-weight: 500; }
         .nav-links a:hover { color: #ffcc00; }
 
-        /* Hero Banner */
+        /* Hero */
         .hero { 
-            background: linear-gradient(rgba(0,33,102,0.7), rgba(0,33,102,0.7)), 
-                        url('https://images.unsplash.com/photo-1563213126-a428448497bd?auto=format&fit=crop&w=1350&q=80'); /* High quality medical background */
+            background: linear-gradient(rgba(0,33,102,0.7), rgba(0,33,102,0.7)), url('https://images.unsplash.com/photo-1563213126-a428448497bd?auto=format&fit=crop&w=1350&q=80');
             background-size: cover; background-position: center;
-            height: 500px; display: flex; flex-direction: column; justify-content: center; align-items: center; color: white; text-align: center; padding: 20px;
+            height: 400px; display: flex; flex-direction: column; justify-content: center; align-items: center; color: white; text-align: center; padding: 20px;
         }
-        .hero h2 { font-size: 42px; margin-bottom: 15px; text-shadow: 2px 2px 4px rgba(0,0,0,0.3); }
-        .hero p { font-size: 18px; max-width: 700px; margin-bottom: 25px; }
-        .btn-enquiry { background: #ffcc00; color: #002147; padding: 15px 35px; text-decoration: none; font-weight: bold; border-radius: 4px; font-size: 18px; box-shadow: 0 4px 15px rgba(255,204,0,0.3); }
+        .hero h2 { font-size: 38px; margin-bottom: 10px; }
+        .btn-enquiry { background: #ffcc00; color: #002147; padding: 12px 30px; text-decoration: none; font-weight: bold; border-radius: 4px; margin-top: 20px; }
 
-        /* Stats/Info Section */
-        .recognition { background: white; padding: 40px 10%; display: flex; justify-content: space-around; text-align: center; border-bottom: 1px solid #eee; }
-        .rec-box h3 { color: #002147; font-size: 24px; margin-bottom: 5px; }
-        .rec-box p { color: #666; font-weight: bold; }
+        /* Recognition Boxes */
+        .recognition { background: white; padding: 30px 10%; display: flex; justify-content: space-around; text-align: center; border-bottom: 1px solid #ddd; }
+        .rec-box h3 { color: #002147; margin-bottom: 5px; }
 
-        /* Course Cards */
-        .courses { padding: 60px 10%; text-align: center; }
-        .courses h2 { margin-bottom: 40px; color: #002147; font-size: 32px; position: relative; padding-bottom: 10px; }
-        .courses h2::after { content: ''; width: 60px; height: 4px; background: #ffcc00; position: absolute; bottom: 0; left: 50%; transform: translateX(-50%); }
+        /* Contact & Map Section */
+        .contact-container { padding: 60px 10%; display: flex; gap: 40px; flex-wrap: wrap; background: white; }
+        .contact-form { flex: 1; min-width: 300px; }
+        .contact-form h2 { color: #002147; margin-bottom: 20px; }
+        .contact-form input, .contact-form textarea { width: 100%; padding: 12px; margin-bottom: 15px; border: 1px solid #ccc; border-radius: 4px; }
+        .btn-submit { background: #002147; color: white; border: none; padding: 12px 25px; cursor: pointer; border-radius: 4px; font-weight: bold; }
         
-        .card-container { display: flex; justify-content: center; gap: 30px; flex-wrap: wrap; }
-        .card { background: white; width: 350px; border-radius: 8px; overflow: hidden; box-shadow: 0 10px 20px rgba(0,0,0,0.05); transition: 0.3s; text-align: left; }
-        .card:hover { transform: translateY(-10px); }
-        .card-img { height: 200px; background: #ddd; background-size: cover; background-position: center; }
-        .card-content { padding: 25px; }
-        .card-content h3 { color: #003366; margin-bottom: 10px; }
-        .card-content p { color: #555; line-height: 1.6; }
+        .map-box { flex: 1; min-width: 300px; height: 350px; border: 5px solid #eee; border-radius: 8px; overflow: hidden; }
 
-        footer { background: #002147; color: white; text-align: center; padding: 40px 20px; margin-top: 40px; }
-        .footer-logo { font-size: 20px; font-weight: bold; margin-bottom: 10px; color: #ffcc00; }
+        footer { background: #002147; color: white; text-align: center; padding: 40px 20px; }
     </style>
 </head>
 <body>
@@ -61,55 +53,44 @@
         <a href="#">ABOUT US</a>
         <a href="#">COURSES</a>
         <a href="#">ADMISSION</a>
-        <a href="#">CONTACT</a>
+        <a href="#contact">CONTACT</a>
     </div>
 </nav>
 
 <div class="hero">
     <h2>Empowering Future Pharmacists</h2>
-    <p>Recognized as the premier Institute of Pharmacy in Eastern India. Shaping healthcare professionals since decades.</p>
-    <a href="#" class="btn-enquiry">ENQUIRY NOW</a>
+    <p>Shaping health professionals with excellence in Patna, Bihar.</p>
+    <a href="#contact" class="btn-enquiry">ENQUIRY NOW</a>
 </div>
 
 <div class="recognition">
-    <div class="rec-box">
-        <h3>PCI</h3>
-        <p>Pharmacy Council of India</p>
-    </div>
-    <div class="rec-box" style="border-left: 1px solid #eee; border-right: 1px solid #eee; padding: 0 40px;">
-        <h3>AICTE</h3>
-        <p>Approved Technical Institute</p>
-    </div>
-    <div class="rec-box">
-        <h3>AKU</h3>
-        <p>Aryabhatta Knowledge University</p>
-    </div>
+    <div class="rec-box"><h3>PCI</h3><p>Pharmacy Council</p></div>
+    <div class="rec-box"><h3>AICTE</h3><p>Approved Institute</p></div>
+    <div class="rec-box"><h3>AKU</h3><p>University Partner</p></div>
 </div>
 
-<div class="courses">
-    <h2>Our Top Programs</h2>
-    <div class="card-container">
-        <div class="card">
-            <div class="card-img" style="background-image: url('https://images.unsplash.com/photo-1585435557343-3b092031a831?auto=format&fit=crop&w=400&q=80');"></div>
-            <div class="card-content">
-                <h3>Bachelor of Pharmacy</h3>
-                <p>4-year degree course focusing on advanced pharmaceutical sciences and research.</p>
-            </div>
-        </div>
-        <div class="card">
-            <div class="card-img" style="background-image: url('https://images.unsplash.com/photo-1576602976047-174e57a47881?auto=format&fit=crop&w=400&q=80');"></div>
-            <div class="card-content">
-                <h3>Diploma in Pharmacy</h3>
-                <p>2-year program designed for students aiming for retail and hospital pharmacy roles.</p>
-            </div>
-        </div>
+<section id="contact" class="contact-container">
+    <div class="contact-form">
+        <h2>Admission Enquiry</h2>
+        <form>
+            <input type="text" placeholder="Full Name" required>
+            <input type="email" placeholder="Email Address" required>
+            <input type="text" placeholder="Mobile Number" required>
+            <textarea rows="4" placeholder="Your Message..."></textarea>
+            <button type="button" class="btn-submit" onclick="alert('Enquiry Sent!')">Send Message</button>
+        </form>
     </div>
-</div>
+
+    <div class="map-box">
+        <!-- Google Map Link for Phulwari Sharif, Patna -->
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d14394.02492164472!2d85.06822295!3d25.5881471!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x39ed579f1680d697%3A0xc316c026049280d9!2sBihar%20College%20of%20Pharmacy!5e0!3m2!1sen!2sin!4v1715000000000!5m2!1sen!2sin" 
+        width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+    </div>
+</section>
 
 <footer>
-    <div class="footer-logo">BIHAR COLLEGE OF PHARMACY</div>
-    <p>Sahay Nagar, Phulwari Sharif, Patna, Bihar - 801505</p>
-    <p style="margin-top: 20px; font-size: 14px; opacity: 0.6;">Designed by Arbaz Alam | © 2026</p>
+    <p>📍 Sahay Nagar, Phulwari Sharif, Patna, Bihar - 801505</p>
+    <p style="margin-top: 15px; font-size: 13px; opacity: 0.6;">© 2026 Designed by Arbaz Alam for BCP Patna</p>
 </footer>
 
 </body>
